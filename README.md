@@ -25,5 +25,8 @@ The idea is to make each cell of hash table point to a linked list of records th
 In computer science, a **red–black tree** is a kind of self-balancing binary search tree. Each node stores an extra bit representing "color" (**"red"** or **"black"**), used to ensure that the tree remains balanced during insertions and deletions.
 
 When the tree is modified, the new tree is rearranged and "repainted" to restore the coloring properties that constrain how unbalanced the tree can become in the worst case. The properties are designed such that this rearranging and recoloring can be performed efficiently.
+
+with explicit NIL leaves |  with implicit left and right docking points
+:-------------------------:|:-------------------------:
 ![red-black_example_1](images/red_black_tree_example.png) | ![red-black_example_2](images/red_black_tree_example2.png)
 
