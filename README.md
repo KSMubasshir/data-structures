@@ -2,6 +2,7 @@
 Collection of idfferent data structures implemented in c++
 ## Data Structures Implemented
 * Hashing
+* Red Black Tree
 ## Description
 ### Hashing
 A hashing algorithm is a mathematical algorithm that converts an input data array of a certain type and arbitrary length to an output bit string of a fixed length. 
@@ -20,3 +21,9 @@ by searching the table sequentially starting at the position given by the hash f
 The idea is to make each cell of hash table point to a linked list of records that have same hash function value. 
 #### Output
 ![output_hashing](images/output_hashing.png)
+### Red Black Tree
+In computer science, a **red–black tree** is a kind of self-balancing binary search tree. Each node stores an extra bit representing "color" (**"red"** or **"black"**), used to ensure that the tree remains balanced during insertions and deletions.
+
+When the tree is modified, the new tree is rearranged and "repainted" to restore the coloring properties that constrain how unbalanced the tree can become in the worst case. The properties are designed such that this rearranging and recoloring can be performed efficiently.
+
+
