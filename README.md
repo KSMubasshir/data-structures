@@ -1,11 +1,26 @@
 # data-structures
 Collection of idfferent data structures implemented in c++
 ## Data Structures Implemented
+* List
 * Hashing
 * Binary Search Tree
 * Red Black Tree
-* List
+
 ## Description
+#### List Data Structure
+The list can be defined as an abstract data type in which the elements are stored in an ordered manner for easier and efficient retrieval of the elements. List Data Structure allows repetition that means a single piece of data can occur more than once in a list. In the case of multiple entries of the same data, each entry of that repeating data is considered as a distinct item or entry. It is very much similar to the array but the major difference between the array and the list data structure is that array stores only homogenous data in them whereas the list (in some programming languages) can store heterogeneous data items in its object. List Data Structure is also known as a sequence.
+
+##### Various operations on the List Data Structure:
+
+The various operations that are performed on a List Data Structure or Sequence are:
+
+* **Add or Insert Operation:** In the Add or Insert operation, a new item (of any data type) is added in the List Data Structure or Sequence object.
+
+* **Replace or reassign Operation:** In the Replace or reassign operation, the already existing value in the List object is changed or modified. In other words, a new value is added at that particular index of the already existing value.
+
+* **Delete or remove Operation:** In the Delete or remove operation, the already present element is deleted or removed from the Dictionary or associative array object.
+
+* **Find or Lookup or Search Operation:** In the Find or Lookup operation, the element stored in that List Data Structure or Sequence object is fetched.
 ### Hashing
 A hashing algorithm is a mathematical algorithm that converts an input data array of a certain type and arbitrary length to an output bit string of a fixed length. 
 Hashing algorithms take any input and convert it to a uniform message by using a hashing table.
@@ -35,17 +50,3 @@ When the tree is modified, the new tree is rearranged and "repainted" to restore
 with explicit NIL leaves |  with implicit left and right docking points
 :-------------------------:|:-------------------------:
 ![red-black_example_1](images/red_black_tree_example.png) | ![red-black_example_2](images/red_black_tree_example2.png)
-#### List Data Structure
-The list can be defined as an abstract data type in which the elements are stored in an ordered manner for easier and efficient retrieval of the elements. List Data Structure allows repetition that means a single piece of data can occur more than once in a list. In the case of multiple entries of the same data, each entry of that repeating data is considered as a distinct item or entry. It is very much similar to the array but the major difference between the array and the list data structure is that array stores only homogenous data in them whereas the list (in some programming languages) can store heterogeneous data items in its object. List Data Structure is also known as a sequence.
-
-##### Various operations on the List Data Structure:
-
-The various operations that are performed on a List Data Structure or Sequence are:
-
-* **Add or Insert Operation:** In the Add or Insert operation, a new item (of any data type) is added in the List Data Structure or Sequence object.
-
-* **Replace or reassign Operation:** In the Replace or reassign operation, the already existing value in the List object is changed or modified. In other words, a new value is added at that particular index of the already existing value.
-
-* **Delete or remove Operation:** In the Delete or remove operation, the already present element is deleted or removed from the Dictionary or associative array object.
-
-* **Find or Lookup or Search Operation:** In the Find or Lookup operation, the element stored in that List Data Structure or Sequence object is fetched.
