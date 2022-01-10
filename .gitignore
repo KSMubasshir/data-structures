@@ -1,4 +1,5 @@
+*.o
 *.out
 *.iml
 *.xml
-/.idea/.gitignore
+*.idea
