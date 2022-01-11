@@ -21,6 +21,9 @@ The various operations that are performed on a List Data Structure or Sequence a
 
 * **Delete or remove Operation:** In the Delete or remove operation, the already present element is deleted or removed from the Dictionary or associative array object.
 
+* **Find or Lookup or Search Operation:** In the Find or Lookup operation, the element stored in that List Data Structure or Sequence object is fetched.
+
+
 #### Graph Data Stucture
 A graph data structure is a collection of nodes that have data and are connected to other nodes.
 ![graph_example](images/graph.png)
@@ -28,7 +31,8 @@ A graph data structure is a collection of nodes that have data and are connected
 ##### Graph Representation
 Graphs are commonly represented in two ways:
 
-1. Adjacency Matrix
+**1. Adjacency Matrix**
+
 An adjacency matrix is a 2D array of V x V vertices. Each row and column represent a vertex.
 
 If the value of any element a[i][j] is 1, it represents that there is an edge connecting vertex i and vertex j.
@@ -36,16 +40,14 @@ If the value of any element a[i][j] is 1, it represents that there is an edge co
 The adjacency matrix for the graph we created above is
 ![output_hashing](images/adjacency_matrix.png)
 
-2. Adjacency List
+**2. Adjacency List**
+
 An adjacency list represents a graph as an array of linked lists.
 
 The index of the array represents a vertex and each element in its linked list represents the other vertices that form an edge with the vertex.
 
 The adjacency list for the graph we made in the first example is as follows:
 ![output_hashing](images/adjacency_list.png)
-
-
-* **Find or Lookup or Search Operation:** In the Find or Lookup operation, the element stored in that List Data Structure or Sequence object is fetched.
 ### Hashing
 A hashing algorithm is a mathematical algorithm that converts an input data array of a certain type and arbitrary length to an output bit string of a fixed length. 
 Hashing algorithms take any input and convert it to a uniform message by using a hashing table.
