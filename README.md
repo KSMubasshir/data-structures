@@ -23,6 +23,7 @@ The various operations that are performed on a List Data Structure or Sequence a
 
 #### Graph Data Stucture
 A graph data structure is a collection of nodes that have data and are connected to other nodes.
+![graph_example](images/graph.png)
 
 ##### Graph Representation
 Graphs are commonly represented in two ways:
@@ -33,7 +34,7 @@ An adjacency matrix is a 2D array of V x V vertices. Each row and column represe
 If the value of any element a[i][j] is 1, it represents that there is an edge connecting vertex i and vertex j.
 
 The adjacency matrix for the graph we created above is
-
+![output_hashing](images/adjacency_matrix.png)
 
 2. Adjacency List
 An adjacency list represents a graph as an array of linked lists.
@@ -41,6 +42,7 @@ An adjacency list represents a graph as an array of linked lists.
 The index of the array represents a vertex and each element in its linked list represents the other vertices that form an edge with the vertex.
 
 The adjacency list for the graph we made in the first example is as follows:
+![output_hashing](images/adjacency_list.png)
 
 
 * **Find or Lookup or Search Operation:** In the Find or Lookup operation, the element stored in that List Data Structure or Sequence object is fetched.
