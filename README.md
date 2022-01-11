@@ -2,6 +2,7 @@
 Collection of idfferent data structures implemented in c++
 ## Data Structures Implemented
 * List
+* Graph
 * Hashing
 * Binary Search Tree
 * Red Black Tree
@@ -19,6 +20,28 @@ The various operations that are performed on a List Data Structure or Sequence a
 * **Replace or reassign Operation:** In the Replace or reassign operation, the already existing value in the List object is changed or modified. In other words, a new value is added at that particular index of the already existing value.
 
 * **Delete or remove Operation:** In the Delete or remove operation, the already present element is deleted or removed from the Dictionary or associative array object.
+
+#### Graph Data Stucture
+A graph data structure is a collection of nodes that have data and are connected to other nodes.
+
+##### Graph Representation
+Graphs are commonly represented in two ways:
+
+1. Adjacency Matrix
+An adjacency matrix is a 2D array of V x V vertices. Each row and column represent a vertex.
+
+If the value of any element a[i][j] is 1, it represents that there is an edge connecting vertex i and vertex j.
+
+The adjacency matrix for the graph we created above is
+
+
+2. Adjacency List
+An adjacency list represents a graph as an array of linked lists.
+
+The index of the array represents a vertex and each element in its linked list represents the other vertices that form an edge with the vertex.
+
+The adjacency list for the graph we made in the first example is as follows:
+
 
 * **Find or Lookup or Search Operation:** In the Find or Lookup operation, the element stored in that List Data Structure or Sequence object is fetched.
 ### Hashing
