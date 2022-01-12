@@ -51,6 +51,7 @@ The adjacency list for the graph we made in the first example is as follows:
 **Bridges in a Graph**
 
 In graph theory, a bridge, cut-edge, or cut arc is an edge of a graph whose deletion increases the graph's number of connected components. Equivalently, an edge is a bridge if and only if it is not contained in any cycle.
+
 **Algorithm to find Bridges in a Graph**
 
 1. Remove an Edge **e**
