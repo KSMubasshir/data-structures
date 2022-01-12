@@ -5,6 +5,7 @@ Collection of idfferent data structures implemented in c++
 * Linked List
 * Graph
 * Hashing
+* Min Heap
 * Binary Search Tree
 * Red Black Tree
 
@@ -90,6 +91,16 @@ linear probing searches the table for the closest following free location and in
 by searching the table sequentially starting at the position given by the hash function, until finding a cell with a matching key or an empty cell.
 ##### Separate Chaining
 The idea is to make each cell of hash table point to a linked list of records that have same hash function value. 
+
+#### Min Heap
+Heap is a special case of balanced binary tree data structure where the root-node key is compared with its children and arranged accordingly. If α has child node β then −
+
+  `key(α) <= key(β)`
+
+As the value of parent is greater than that of child, this property generates Min Heap.
+
+
+
 #### Output
 ![output_hashing](images/output_hashing.png)
 ### Binary Search Tree
