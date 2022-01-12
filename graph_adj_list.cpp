@@ -7,6 +7,10 @@
 #define BLACK 3
 #include<iostream>
 #include<iomanip>
+struct edge{
+    int u;
+    int v;
+};
 using namespace std;
 class Queue
 {
@@ -157,9 +161,7 @@ void ArrayList::removeItemAt(int position) //do not preserve order of items
     length-- ;
 }
 
-
-void ArrayList::removeItem(int item)
-{
+void ArrayList::removeItem(int item){
     int position;
     position = searchItem(item) ;
     if ( position == NULL_VALUE ) return ; //nothing to remove
@@ -167,33 +169,28 @@ void ArrayList::removeItem(int item)
 }
 
 
-int ArrayList::getItem(int position)
-{
+int ArrayList::getItem(int position){
     if(position < 0 || position >= length) return NULL_VALUE ;
     return list[position] ;
 }
 
-int ArrayList::getLength()
-{
+int ArrayList::getLength(){
     return length ;
 }
 
-bool ArrayList::empty()
-{
+bool ArrayList::empty(){
     if(length==0)return true;
     else return false;
 }
 
-void ArrayList::printList()
-{
+void ArrayList::printList(){
     int i;
     for(i=0; i<length; i++)
         printf("%d ", list[i]);
     printf("Current size: %d, current length: %d\n", listMaxSize, length);
 }
 
-ArrayList::~ArrayList()
-{
+ArrayList::~ArrayList(){
     if(list) delete [] list;
     list = 0 ;
 }
@@ -201,8 +198,7 @@ ArrayList::~ArrayList()
 //******************ArrayList class ends here*************************
 
 //******************Graph class starts here**************************
-class Graph
-{
+class Graph{
     int nVertices, nEdges ;
     bool directed ;
     ArrayList  * adjList;
@@ -222,11 +218,11 @@ public:
     void bfs(int source); //will run bfs in the graph
     void dfs(int source); //will run dfs in the graph
     void dfs_visit(int source);
+    void printBridges(void);
 };
 
 
-Graph::Graph(bool dir)
-{
+Graph::Graph(bool dir){
     nVertices = 0 ;
     nEdges = 0 ;
     adjList = 0 ;
@@ -240,8 +236,7 @@ Graph::Graph(bool dir)
     //define other variables to be initialized
 }
 
-void Graph::setnVertices(int n)
-{
+void Graph::setnVertices(int n){
     this->nVertices = n ;
     if(adjList!=0) delete[] adjList ; //delete previous list
     adjList = new ArrayList[nVertices] ;
@@ -251,38 +246,33 @@ void Graph::setnVertices(int n)
     f=new int[nVertices];
 }
 
-void Graph::addEdge(int u, int v)
-{
+void Graph::addEdge(int u, int v){
     if(u<0 || v<0 || u>=nVertices || v>=nVertices) return; //vertex out of range
     this->nEdges++ ;
     adjList[u].insertItem(v) ;
     if(!directed) adjList[v].insertItem(u) ;
 }
 
-void Graph::removeEdge(int u, int v)
-{
+void Graph::removeEdge(int u, int v){
     if(u<0 || v<0 || u>=nVertices || v>=nVertices) return; //vertex out of range
     this->nEdges-- ;
     adjList[u].removeItem(v);
     if(!directed) adjList[v].removeItem(u);
 }
 
-bool Graph::isEdge(int u, int v)
-{
+bool Graph::isEdge(int u, int v){
     if(u<0 || v<0 || u>=nVertices || v>=nVertices) return false;
     else if(adjList[u].searchItem(v)==NULL_VALUE) return false;
     else return true;
 }
 
-int Graph::getDegree(int u)
-{
+int Graph::getDegree(int u){
     if(u<0||u>=nVertices) return NULL_VALUE;
 
     return adjList[u].getLength();
 }
 
-bool Graph::hasCommonAdjacent(int u, int v)
-{
+bool Graph::hasCommonAdjacent(int u, int v){
     if(u<0 || v<0 || u>=nVertices || v>=nVertices) return false;
 
     int lengthu=adjList[u].getLength();
@@ -300,8 +290,7 @@ bool Graph::hasCommonAdjacent(int u, int v)
     return false;
 }
 
-void Graph::bfs(int source)
-{
+void Graph::bfs(int source){
     //complete this function
     //initialize BFS variables
     for(int i=0; i<nVertices; i++)
@@ -353,8 +342,7 @@ void Graph::bfs(int source)
 
 }
 
-void Graph::dfs(int source)
-{
+void Graph::dfs(int source){
     for(int i=0; i<nVertices; i++)
     {
         color[i] = WHITE ;
@@ -393,8 +381,7 @@ void Graph::dfs(int source)
 //    printf("\n");
 }
 
-void Graph::dfs_visit(int source)
-{
+void Graph::dfs_visit(int source){
     int u=source;
     color[u]=GREY;
     time=time+1;
@@ -415,8 +402,7 @@ void Graph::dfs_visit(int source)
     f[u]=time;
 }
 
-int Graph::getDist(int u, int v)
-{
+int Graph::getDist(int u, int v){
     //returns the shortest path distance from u to v
     //must call bfs using u as the source vertex, then use distance array to find the distance
     if(u<0 || v<0 || u>=nVertices || v>=nVertices) return NULL_VALUE;
@@ -425,8 +411,7 @@ int Graph::getDist(int u, int v)
     //return INFINITY ;
 }
 
-void Graph::printGraph()
-{
+void Graph::printGraph(){
     printf("\nNumber of vertices: %d, Number of edges: %d\n", nVertices, nEdges);
     for(int i=0; i<nVertices; i++)
     {
@@ -439,8 +424,7 @@ void Graph::printGraph()
     }
 }
 
-Graph::~Graph()
-{
+Graph::~Graph(){
     delete []adjList;
     delete []color;
     delete []parent;
@@ -452,12 +436,35 @@ Graph::~Graph()
     dist=0;
     f=0;
 }
+void Graph::printBridges(void){
+    bool x;
+
+    for(int i=0;i<nVertices;i++)
+    {
+        for(int j=0;j<nVertices;j++)
+        {
+            if(isEdge(i,j))
+            {
+                removeEdge(i,j);
+
+                bfs(0);
+                for(int k=0;k<nVertices;k++)
+                {
+                    if(color[k]==WHITE){
+                        printf("(%d,%d) is a bridge\n",i,j);
+                        break;
+                    }
+                }
+                addEdge(i,j);
+            }
+        }
+    }
+}
 //**********************Graph class ends here******************************
 
 
 //******main function to test your code*************************
-int main(void)
-{
+int main(void){
     int n;
     Graph g;
     printf("Enter number of vertices: ");
@@ -471,6 +478,7 @@ int main(void)
         printf("4. isEdge(u,v) 5. Print Graph  6. Exit.\n");
         printf("7. removeEdge(u,v) 8.  getDegree(u)\n");
         printf("9. hasCommonAdjacent(u,v)  10. getDist(u,v)\n");
+        printf("11. PrintBridges\n");
         int ch;
         scanf("%d",&ch);
         if(ch==1)
@@ -525,6 +533,9 @@ int main(void)
             cin>>u>>v;
             cout<<"Distance between "<<u<<" and "<<v<<" is="<<g.getDist(u,v)<<endl;
         }
+        else if(ch==11)
+        {
+            g.printBridges();
+        }
     }
-
 }
