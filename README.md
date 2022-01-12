@@ -56,8 +56,7 @@ In graph theory, a bridge, cut-edge, or cut arc is an edge of a graph whose dele
 
 1. Remove an Edge **e**
 2. Run BFS
-3. Check the color of each vertices
-    a. If there is a white node then edge **e** is a bridge
+3. Check the color of each vertices. If there is a white node then edge **e** is a bridge.
 
 ![bridge_example](images/bridge.png)
 ### Hashing
