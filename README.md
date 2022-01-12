@@ -30,6 +30,16 @@ The various operations that are performed on a List Data Structure or Sequence a
 * The last node of the list contains pointer to the null.
 ![linked_list](images/linked_list.png)
 
+**Singly Linked List**
+
+It is the most common. Each node has data and a pointer to the next node.
+
+
+**Doubly Linked List**
+
+We add a pointer to the previous node in a doubly-linked list. Thus, we can go in either direction: forward or backward.
+
+
 #### Graph Data Stucture
 A graph data structure is a collection of nodes that have data and are connected to other nodes.
 ![graph_example](images/graph.png)
