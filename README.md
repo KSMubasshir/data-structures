@@ -28,7 +28,7 @@ The various operations that are performed on a List Data Structure or Sequence a
 * Linked List can be defined as collection of objects called nodes that are randomly stored in the memory.
 * A node contains two fields i.e. data stored at that particular address and the pointer which contains the address of the next node in the memory.
 * The last node of the list contains pointer to the null.
-
+![linked_list](images/linked_list.png)
 
 #### Graph Data Stucture
 A graph data structure is a collection of nodes that have data and are connected to other nodes.
