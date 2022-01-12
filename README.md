@@ -33,12 +33,12 @@ The various operations that are performed on a List Data Structure or Sequence a
 **Singly Linked List**
 
 It is the most common. Each node has data and a pointer to the next node.
-
+![singly_linked_list](images/singly_linked_list.png)
 
 **Doubly Linked List**
 
 We add a pointer to the previous node in a doubly-linked list. Thus, we can go in either direction: forward or backward.
-
+![doubly_linked_list](images/doubly_linked_list.png)
 
 #### Graph Data Stucture
 A graph data structure is a collection of nodes that have data and are connected to other nodes.
