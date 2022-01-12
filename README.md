@@ -91,6 +91,8 @@ linear probing searches the table for the closest following free location and in
 by searching the table sequentially starting at the position given by the hash function, until finding a cell with a matching key or an empty cell.
 ##### Separate Chaining
 The idea is to make each cell of hash table point to a linked list of records that have same hash function value. 
+#### Output
+![output_hashing](images/output_hashing.png)
 
 #### Min Heap
 Heap is a special case of balanced binary tree data structure where the root-node key is compared with its children and arranged accordingly. If α has child node β then −
@@ -105,26 +107,35 @@ We shall use the same example to demonstrate how a Max Heap is created. The proc
 
 We are going to derive an algorithm for max heap by inserting one element at a time. At any point of time, heap must maintain its property. While insertion, we also assume that we are inserting a node in an already heapified tree.
 
-`**Step 1 −** Create a new node at the end of heap.
- **Step 2 −** Assign new value to the node.
- **Step 3 −** Compare the value of this child node with its parent.
- **Step 4 −** If value of parent is less than child, then swap them.
- **Step 5 −** Repeat step 3 & 4 until Heap property holds.`
+`Step 1 − Create a new node at the end of heap.
+
+ Step 2 − Assign new value to the node.
+ 
+ Step 3 − Compare the value of this child node with its parent.
+ 
+ Step 4 − If value of parent is less than child, then swap them.
+ 
+ Step 5 − Repeat step 3 & 4 until Heap property holds.`
+ 
 ![max_heap_animation](images/max_heap_animation.gif)
 
 
 **Max Heap Deletion Algorithm**
 
 Let us derive an algorithm to delete from max heap. Deletion in Max (or Min) Heap always happens at the root to remove the Maximum (or minimum) value.
-`**Step 1 −** Remove root node.
-**Step 2 −** Move the last element of last level to root.
-**Step 3 −** Compare the value of this child node with its parent.
-**Step 4 −** If value of parent is less than child, then swap them.
-**Step 5 −** Repeat step 3 & 4 until Heap property holds.`
+
+`Step 1 − Remove root node.
+
+Step 2 − Move the last element of last level to root.
+
+Step 3 − Compare the value of this child node with its parent.
+
+Step 4 − If value of parent is less than child, then swap them.
+
+Step 5 − Repeat step 3 & 4 until Heap property holds.`
+
 ![max_heap_deletion_animation](images/max_heap_deletion_animation.gif)
 
-#### Output
-![output_hashing](images/output_hashing.png)
 ### Binary Search Tree
 In computer science, a binary search tree (BST), also called an ordered or sorted binary tree, is a rooted binary tree data structure whose internal nodes each store a key greater than all the keys in the node’s left subtree and less than those in its right subtree. A binary tree is a type of data structure for storing data such as numbers in an organized way. Binary search trees allow binary search for fast lookup, addition and removal of data items, and can be used to implement dynamic sets and lookup tables. The order of nodes in a BST means that each comparison skips about half of the remaining tree, so the whole lookup takes time proportional to the binary logarithm of the number of items stored in the tree. This is much better than the linear time required to find items by key in an (unsorted) array, but slower than the corresponding operations on hash tables. 
 ![output_binary_search_tree](images/binary_search_tree.png)
