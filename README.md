@@ -49,8 +49,10 @@ The index of the array represents a vertex and each element in its linked list r
 The adjacency list for the graph we made in the first example is as follows:
 ![output_hashing](images/adjacency_list.png)
 **Bridges in a Graph**
+
 In graph theory, a bridge, cut-edge, or cut arc is an edge of a graph whose deletion increases the graph's number of connected components. Equivalently, an edge is a bridge if and only if it is not contained in any cycle.
 **Algorithm to find Bridges in a Graph**
+
 1. Remove an Edge **e**
 2. Run BFS
 3. Check the color of each vertices
